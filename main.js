@@ -8,17 +8,17 @@ function carousel(){
     
     "use strict"
     
-    $('.box').each(function(){
+    $('.box-warp').each(function(){
         let box = $(this);
         console.log(box);
         setInterval(function(){
             let pos = box.offset().left;
             let coor = box.offset() 
-            if(coor.left <= 1640){
+            if(coor.left <= 1620){
                 pos++;
                 box.offset({ left : pos });
             } else {
-                pos = -360;
+                pos = -380;
                 box.offset({ left : pos });
             }
         }, 20);
